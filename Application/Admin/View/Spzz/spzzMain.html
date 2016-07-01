@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>..</title>
+<link href="__PUBLIC__/css/default.css" rel="stylesheet" type="text/css" />
+<link href="__PUBLIC__/css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="__PUBLIC__/js/goaler.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/jquery.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/sysGeneral.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/systemUtils.js"></script>
+</head>
+<script type="text/javascript">
+$(function(){
+	
+});
+
+//删除
+function doDelete(){
+	var ids = getId('delete'); 
+	if(ids==false){
+		return;
+	}
+	//alert(ids);
+	if(confirm("确定删除吗？")){
+	   location.href='__URL__/delete?ids='+ids;
+	}
+}
+
+
+//条件查询
+function doSearch(){
+	$('#formQuery').submit();
+}
+
+
+//开始直播
+function startOnline(id){
+	$.post('__PUBLIC__/online/start.php');
+	location.href="__URL__/spzzshow?id="+id;
+}
+
+</script>
+<body>
+<div id="div_right">
+	<div class="right_top">
+					<span>实盘追踪</span>
+				</div>
+				<div class="title">
+					<a href="__URL__/spzzUI"  class="btn btn-green">新增</a> 				
+					<a href="javascript:doDelete()" class="btn btn-red">删除</a> 				
+				</div>
+				<!-- 
+				style="height:400px;overflow:auto;"
+				 -->
+		<div class="develop"  >
+					<table width="100%" border="0" class="mtable">
+						<tr>
+							<th class="thcheckbox" width="3%" ><input type="checkbox"
+								name="checkbox" id="checkbox" onclick="checkAll(this);" ></th>						
+							<th width="35%" >主题</th>						
+							<th width="20%" >嘉宾</th>						
+							<th width="20%" >时间</th>						
+							<th width="15%" >操作</th>
+						</tr>
+					<tbody id="goaler">
+						<empty name="spzzList">
+						<tr>
+							<td colspan="5" align="center"><font color="red">暂无记录</font></td>
+						</tr>
+						</empty>
+						
+						<foreach name="spzzList" item="vo" key="k" >  
+							  <tr id="{$vo.id }">
+						         <td class="thcheckbox"><input type="checkbox" name="chk" id="chk" onclick="selTr(this);" ></td>						      
+						         <td>{$vo.subject}</td>						   					 					         			 					         
+						         <td>{$vo.guest}</td>						   					 					         			 					         
+						         <td>{$vo.intime}</td>						   					 					         			 					         
+						         <td>
+						         	<a href="__URL__/spzzrecord?id={$vo.id}">查看内容</a>&nbsp;					         	
+						         	<eq name="k" value="0"><a href="javascript:#" onclick="startOnline({$vo.id})">开始直播</a>&nbsp;	</eq>				         	
+						         </td>						 					         
+						      </tr>
+					    </foreach>
+						
+					</tbody>
+					</table>
+		</div>
+				{$page}
+</div>
+</body>
+</html>

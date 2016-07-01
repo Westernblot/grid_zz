@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="__PUBLIC__/res/favicon.ico" type="image/x-icon">
+	<title>{$type}</title>
+	<link rel="stylesheet" href="__PUBLIC__/zzcss/base.css" type="text/css" />
+	<link rel="stylesheet" href="__PUBLIC__/zzcss/columns.css" type="text/css" />
+</head>
+
+<body>
+   
+    <!-- 固定条 -->
+   <include file="Public/top" />
+
+    <!-- 固定条 -->
+   <include file="Public/bar" />
+
+<div id="container"> 
+   <div class="content_title"><a href="__APP__/Home/Index/index">首页</a>　>　<span>
+   	<a href="__APP__/Home/Index/news?type={$type}">
+  
+   		<eq name="type" value="中证投资锦囊">每日金股</eq>
+   		<neq name="type" value="中证投资锦囊">{$type}</neq>
+   		
+   	</a></span></div>   
+   <div class="sub-banner">
+    	<a href="{$link.action}"><img src="{$link.imgurl}" width="1024" height="100" /></a>
+    </div>
+   <div class="content">
+   		<div class="content-left">
+            <ul class="info">
+            	
+            <foreach name="newsList" item="vo" >          		 
+                 <li>
+                	<a href="__APP__/Home/Index/show?id={$vo.id}"><img src="{$vo.imgurl}" class="object"/></a>
+                   <div class="lable">
+                    <h3><a href="__APP__/Home/Index/show?id={$vo.id}">{$vo.subject}</a></h3>
+                    <h5>{$vo.author}</h5>
+                    <h6>{$vo.description|mb_substr=0,60,'utf-8'}</h6>
+                     </div>
+                 </li>
+                
+            </foreach>
+            	
+                <!-- <li>
+                	<a href="show.html"><img src="__PUBLIC__/picfile/011.jpg" class="object"/></a>
+                    <div class="lable">
+                        <h3><a href="show.html">聚焦国有林场：京津冀协同发展中的"加减</a></h3>
+                        <h5>章轲</h5>
+                        <h6>国有林场和国有林区是国家最重要的生态安全屏障和维护国家生态安全最重要的基础设施，在经济社会发展和生态文明建设中发挥着不可替代的重要作用…</h6>
+                    </div>
+                </li>
+                <li>
+                	<a href="show.html"><img src="__PUBLIC__/picfile/012.jpg" class="object"/></a>
+                    <div class="lable">
+                        <h3><a href="show.html">星美覃辉逆势回归A股 计划五年开千家影院</a></h3>
+                        <h5>陈汉辞</h5>
+                        <h6>A股剧烈震荡之时，仍有机构无惧"乱世"，在市场低位布局二级市场股权收购，星美集团便是其中之一。星美集团创始人覃辉近期重回资本市场的视野…</h6>
+                    </div>
+                </li>
+                <li>
+                	<a href="show.html"><img src="__PUBLIC__/picfile/2.jpg" class="object"/></a>
+                    <div class="lable">
+                        <h3><a href="show.html">铜掌柜是国内首家专注跨境电商金融业务的互联网金融平台</a></h3>
+                        <h5>陈周锡</h5>
+                        <h6>铜掌柜是国内首家专注跨境电商金融业务的互联网金融平台，已和杭州近百家跨境电商商家签订了合作协议。据机构预测，到2017年，我国跨境电商进…</h6>
+                    </div>
+                </li>
+                <li>
+                	<a href="show.html"><img src="__PUBLIC__/picfile/3.jpg" class="object"/></a>
+                    <div class="lable">
+                        <h3><a href="show.html">聚焦国有林场：京津冀协同发展中的"加减</a></h3>
+                        <h5>章轲</h5>
+                        <h6>国有林场和国有林区是国家最重要的生态安全屏障和维护国家生态安全最重要的基础设施，在经济社会发展和生态文明建设中发挥着不可替代的重要作用…</h6>
+                    </div>
+                </li>
+                <li>
+                	<a href="show.html"><img src="__PUBLIC__/picfile/011.jpg" class="object"/></a>
+                    <div class="lable">
+                        <h3><a href="show.html">聚焦国有林场：京津冀协同发展中的"加减</a></h3>
+                        <h5>章轲</h5>
+                        <h6>国有林场和国有林区是国家最重要的生态安全屏障和维护国家生态安全最重要的基础设施，在经济社会发展和生态文明建设中发挥着不可替代的重要作用…</h6>
+                    </div>
+                </li>
+                <li>
+                	<a href="show.html"><img src="__PUBLIC__/picfile/012.jpg" class="object"/></a>
+                    <div class="lable">
+                        <h3><a href="show.html">聚焦国有林场：京津冀协同发展中的"加减</a></h3>
+                        <h5>章轲</h5>
+                        <h6>国有林场和国有林区是国家最重要的生态安全屏障和维护国家生态安全最重要的基础设施，在经济社会发展和生态文明建设中发挥着不可替代的重要作用…</h6>
+                    </div>
+                </li>
+                <li>
+                	<a href="show.html"><img src="__PUBLIC__/picfile/013.jpg" class="object"/></a>
+                    <div class="lable">
+                        <h3><a href="show.html">聚焦国有林场：京津冀协同发展中的"加减</a></h3>
+                        <h5>章轲</h5>
+                        <h6>国有林场和国有林区是国家最重要的生态安全屏障和维护国家生态安全最重要的基础设施，在经济社会发展和生态文明建设中发挥着不可替代的重要作用…</h6>
+                    </div>
+                </li> -->
+            </ul>
+            <div class='Page'>
+                <!-- <a href='#' title='首页'>首页</a>
+                <a href='#' title='上一页'>上一页</a>
+                <a href='#' class='active'>1</a>
+                <a href='#'>2</a>
+                <a href='#'>3</a>
+                <a href='#' title='下一页'>下一页</a>
+                <a href='#' title='末页'>末页</a> -->
+                {$page}
+            </div>
+        </div>
+   		<div class="content-right">
+        	<div class="content-right-atd">
+        		<foreach name="linkList" item="vo">      
+        			<eq name="vo.type" value="右边栏广告">       				
+        			   <a href="{$vo.action}"><img src="{$vo.imgurl}"/></a><br/><br/>
+        			</eq> 	
+        		</foreach>
+                <!-- <a href="#"><img src="__PUBLIC__/picfile/atd01.jpg"/></a><br/><br/>
+                <a href="#"><img src="__PUBLIC__/picfile/atd02.jpg"/></a><br/><br/>
+                <a href="#"><img src="__PUBLIC__/picfile/atd03.jpg"/></a> -->
+            </div>
+        
+        </div>
+   </div>
+</div>
+
+
+   <!-- 固定条 -->
+   <include file="Public/foot" />
+
+</body>
+</html>

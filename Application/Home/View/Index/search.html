@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="__PUBLIC__/res/favicon.ico" type="image/x-icon">
+	<title>搜索结果</title>
+	<link rel="stylesheet" href="__PUBLIC__/zzcss/base.css" type="text/css" />
+	<link rel="stylesheet" href="__PUBLIC__/zzcss/columns.css" type="text/css" />
+</head>
+
+<body>
+<!-- 固定条 -->
+   <include file="Public/top" />
+
+    <!-- 固定条 -->
+   <include file="Public/bar" />
+
+<div id="container"> 
+   <div class="content_title"><a href="__APP__/Home/Index/index">首页</a>　>　<span>搜索结果</span></div>   
+   <div class="content">
+            <!-- <div class="contentbox_b">搜索 null  每页显示7条记录    共搜索到100个结果   耗时0.0070秒</div> -->
+            <ul class="contentbox_c">
+            	
+            	<foreach name="newsList" item="vo">
+            		<li>
+                   <div class="medium"><a href="__APP__/Home/Index/show?id={$vo.id}">{$vo.title}</a><em>-{$vo.type}</em></div>
+                    <div class="c-abstract">{$vo.title}　　<br>&nbsp;{$vo.description}　</div>
+                    <div class="g"><!-- http://www.hsgtj.gov.cn/wzlm/zwdt/tzgg/32138.htm -->&nbsp;{$vo.intime}&nbsp;</div>
+                    </li>
+            	</foreach>
+            	
+                <!-- <li>
+                   <div class="medium"><a href="show.html">黄石国土资源局</a><em>-首页</em></div>
+                    <div class="c-abstract">欢迎<em>黄石市国土资源局</em>信息网!综合信息 图片新闻 本地新闻 黄石市建立"三多三少"节地管理模式 黄石人均耕地0.68亩,仅占全省人均水平的52%,人口资源环境承载力567...</div>
+                    <div class="g">http://www.hsgtj.gov.cn/&nbsp;2014-07-31&nbsp;</div>
+                </li>
+                <li>
+                   <div class="medium"><a href="show.html">关于召开矿产资源储量报告评审会的公告</a><em>-通知公告</em></div>
+                    <div class="c-abstract">关于召开矿产资源储量报告评审会的公告　　&nbsp;　　根据《矿产资源储量评审认定办法》（国土资发[1999]205号）有关规定，我中心决定召开矿产资源储量报告评审会议，现将有关事项公告如下：　　</div>
+                    <div class="g">http://www.hsgtj.gov.cn/wzlm/zwdt/tzgg/32138.htm&nbsp;2014-08-07&nbsp;</div>
+                </li>
+                <li>
+                   <div class="medium"><a href="show.html">黄石国土资源局</a><em>-首页</em></div>
+                    <div class="c-abstract">欢迎<em>黄石市国土资源局</em>信息网!综合信息 图片新闻 本地新闻 黄石市建立"三多三少"节地管理模式 黄石人均耕地0.68亩,仅占全省人均水平的52%,人口资源环境承载力567...</div>
+                    <div class="g">http://www.hsgtj.gov.cn/&nbsp;2014-07-31&nbsp;</div>
+                </li>
+                <li>
+                   <div class="medium"><a href="show.html">关于召开矿产资源储量报告评审会的公告</a><em>-通知公告</em></div>
+                    <div class="c-abstract">关于召开矿产资源储量报告评审会的公告　　&nbsp;　　根据《矿产资源储量评审认定办法》（国土资发[1999]205号）有关规定，我中心决定召开矿产资源储量报告评审会议，现将有关事项公告如下：　　</div>
+                    <div class="g">http://www.hsgtj.gov.cn/wzlm/zwdt/tzgg/32138.htm&nbsp;2014-08-07&nbsp;</div>
+                </li>
+                <li>
+                   <div class="medium"><a href="show.html">黄石国土资源局</a><em>-首页</em></div>
+                    <div class="c-abstract">欢迎<em>黄石市国土资源局</em>信息网!综合信息 图片新闻 本地新闻 黄石市建立"三多三少"节地管理模式 黄石人均耕地0.68亩,仅占全省人均水平的52%,人口资源环境承载力567...</div>
+                    <div class="g">http://www.hsgtj.gov.cn/&nbsp;2014-07-31&nbsp;</div>
+                </li>
+                <li>
+                   <div class="medium"><a href="show.html">关于召开矿产资源储量报告评审会的公告</a><em>-通知公告</em></div>
+                    <div class="c-abstract">...</div>
+                    <div class="g">http://www.hsgtj.gov.cn/wzlm/zwdt/tzgg/32138.htm&nbsp;2014-08-07&nbsp;</div>
+                </li>
+                <li>
+                   <div class="medium"><a href="show.html">关于召开矿产资源储量报告评审会的公告</a><em>-通知公告</em></div>
+                    <div class="c-abstract">关于召开矿产资源储量报告评审会的公告　　&nbsp;　　根据《矿产资源储量评审认定办法》（国土资发[1999]205号）有关规定，我中心决定召开矿产资源储量报告评审会议，现将有关事项公告如下：　　</div>
+                    <div class="g">http://www.hsgtj.gov.cn/wzlm/zwdt/tzgg/32138.htm&nbsp;2014-08-07&nbsp;</div>
+                </li> -->
+            </ul>   
+            
+            <div class='Page'>
+            	{$page}
+                <!-- <a href='#' title='首页'>首页</a>
+                <a href='#' title='上一页'>上一页</a>
+                <a href='#' class='active'>1</a>
+                <a href='#'>2</a>
+                <a href='#'>3</a>
+                <a href='#' title='下一页'>下一页</a>
+                <a href='#' title='末页'>末页</a> -->
+            </div> 
+       </div>
+</div>
+
+
+  <!-- 固定条 -->
+   <include file="Public/foot" />
+
+</body>
+</html>

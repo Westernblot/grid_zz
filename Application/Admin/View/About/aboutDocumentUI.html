@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<link href="__PUBLIC__/css/default.css" rel="stylesheet" type="text/css" />
+<link href="__PUBLIC__/css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="__PUBLIC__/js/goaler.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/jquery-1.4.1.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/DatePicker/WdatePicker.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/kindeditor/kindeditor-min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/kindeditor/lang/zh_CN.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/sysGeneral.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/systemUtils.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/ajaxfileupload.js"></script>
+<script type="text/javascript">
+
+var kindEditor;
+$(document).ready(function(){
+	
+	kindEditor = KindEditor.create('#content', {
+		themeType : 'simple',
+		allowPreviewEmoticons : false,
+		allowFileManager : false,
+		allowImageUpload : true,
+		uploadJson : '__APP__/Home/File/mangeUpload',
+		urlType: 'relative',
+		items : [
+			'source', 'formatblock', 'fontname', 'fontsize', '|', 'forecolor', 'hilitecolor', 'bold', 'italic', 'underline',
+			'removeformat', 'strikethrough', 'lineheight', '|', 'justifyleft', 'justifycenter', 'justifyright', 'insertorderedlist',
+			'insertunorderedlist', '|', 'emoticons', 'image', 'table', 'hr', 'link', '|', 'wordpaste', 'quickformat', 'fullscreen']
+	});
+	
+});
+
+function sub(){
+	
+	var checked = checkForm('#form1');
+	if(checked==false){
+		return;
+	}
+	
+	kindEditor.sync();
+	$('#form1').submit();
+}
+
+</script>
+</head>
+<body style="overflow: auto;">
+<div id="div_right">
+	<div class="right_top">
+					<span>{$type}</span>
+				</div>
+				<div class="title">
+					<a href="javascript:sub()"  class="btn btn-green">保存</a> 
+					<a href="javascript:history.back();" class="btn btn-default"  >返回</a>
+				</div>
+				
+		<div class="develop">
+		<form action="{$document==null?'__URL__/insert':'__URL__/update'}"  id="form1" method="post">
+		   
+		   <input type="hidden" name="type" value="{$type}" />
+		   <input type="hidden" name="id" value="{$document.id}" />
+		   
+		   <table width="100%" border="0" class="mtable" >
+		   <tr>	 
+		   		<td align="right">内容</td>
+		    	<td colspan="3">
+		    		  <textarea id="content" name="content" style="width: 100%; height:500px;visibility: hidden;">{$document.content}</textarea>
+		    	</td>
+		   </tr>
+		   </table>
+		</form>
+		</div>
+		
+</div>
+</body>
+</html>

@@ -1,0 +1,267 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="__PUBLIC__/res/favicon.ico" type="image/x-icon">
+	<title>私募排行</title>
+	<link rel="stylesheet" href="__PUBLIC__/zzcss/base.css" type="text/css" />
+	<link rel="stylesheet" href="__PUBLIC__/zzcss/columns.css" type="text/css" />
+</head>
+
+<body>
+<!-- 固定条 -->
+   <include file="Public/top" />
+
+    <!-- 固定条 -->
+   <include file="Public/bar" />
+
+<div id="container"> 
+   <div class="content_title"><a href="__APP__/Home/Index/index">首页</a>　>　<span><a href="__APP__/Home/Index/smph">私募排行</a></span></div>   
+   <div class="sub-banner">
+    	<a href="{$link.action}"><img src="{$link.imgurl}" width="1024" height="100" /></a>
+    </div>
+   <div class="content">
+   		<div class="content-left border">
+        	<div class="table-main">
+                <ul class="r-title">   
+                    <!-- <li class="active">近三月</li>
+                    <li>近六月</li>
+                    <li>近一年</li>
+                    <li>近两年</li> -->
+                        <li <eq name="type" value="近三月">class="active"</eq> ><a href="__APP__/Home/Index/smph?type=近三月">近三月</a></li>
+                    	<li <eq name="type" value="近六月">class="active"</eq> ><a href="__APP__/Home/Index/smph?type=近六月">近六月</a></li>
+                    	<li <eq name="type" value="近一年">class="active"</eq> ><a href="__APP__/Home/Index/smph?type=近一年">近一年</a></li>
+                    	<li <eq name="type" value="近两年">class="active"</eq> ><a href="__APP__/Home/Index/smph?type=近两年">近两年</a></li>
+                </ul>
+                <table class="ranking">
+                    <tr>
+                        <th>排行</th>
+                        <th>产品名称</th>
+                        <th>基金经理</th>
+                        <th>收益率</th>
+                    </tr>
+                    
+                      <foreach name="privateList" item="vo">
+                        	<tr>
+                        	<td>{$vo.rank}</td>
+                        	<td>{$vo.name}</td>
+                        	<td>{$vo.manager}</td>
+                        	<td>{$vo.rate}</td>
+                            </tr>
+                        </foreach>
+                    <!-- <tr>
+                        <td>1</td>
+                        <td>创世翔1号</td>
+                        <td>黄平</td>
+                        <td>90.00%</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>汇吉证券投资</td>
+                        <td>&nbsp;</td>
+                        <td>79.00%</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>泰石1期</td>
+                        <td>车克</td>
+                        <td>78.00%</td>
+                    </tr>   
+                    <tr>
+                        <td>4</td>
+                        <td>平安证大一期</td>
+                        <td>朱南松</td>
+                        <td>69.00%</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>融裕5号</td>
+                        <td>张一凡</td>
+                        <td>67.00%</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>创世翔1号</td>
+                        <td>黄平</td>
+                        <td>90.00%</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>汇吉证券投资</td>
+                        <td>&nbsp;</td>
+                        <td>79.00%</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>泰石1期</td>
+                        <td>车克</td>
+                        <td>78.00%</td>
+                    </tr>   
+                    <tr>
+                        <td>9</td>
+                        <td>平安证大一期</td>
+                        <td>朱南松</td>
+                        <td>69.00%</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>融裕5号</td>
+                        <td>张一凡</td>
+                        <td>67.00%</td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td>创世翔1号</td>
+                        <td>黄平</td>
+                        <td>90.00%</td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td>汇吉证券投资</td>
+                        <td>&nbsp;</td>
+                        <td>79.00%</td>
+                    </tr>
+                    <tr>
+                        <td>13</td>
+                        <td>泰石1期</td>
+                        <td>车克</td>
+                        <td>78.00%</td>
+                    </tr>   
+                    <tr>
+                        <td>14</td>
+                        <td>平安证大一期</td>
+                        <td>朱南松</td>
+                        <td>69.00%</td>
+                    </tr>
+                    <tr>
+                        <td>15</td>
+                        <td>融裕5号</td>
+                        <td>张一凡</td>
+                        <td>67.00%</td>
+                    </tr>
+                    <tr>
+                        <td>16</td>
+                        <td>创世翔1号</td>
+                        <td>黄平</td>
+                        <td>90.00%</td>
+                    </tr>
+                    <tr>
+                        <td>17</td>
+                        <td>汇吉证券投资</td>
+                        <td>&nbsp;</td>
+                        <td>79.00%</td>
+                    </tr>
+                    <tr>
+                        <td>18</td>
+                        <td>泰石1期</td>
+                        <td>车克</td>
+                        <td>78.00%</td>
+                    </tr>   
+                    <tr>
+                        <td>19</td>
+                        <td>平安证大一期</td>
+                        <td>朱南松</td>
+                        <td>69.00%</td>
+                    </tr>
+                    <tr>
+                        <td>20</td>
+                        <td>融裕5号</td>
+                        <td>张一凡</td>
+                        <td>67.00%</td>
+                    </tr>
+                    <tr>
+                        <td>21</td>
+                        <td>创世翔1号</td>
+                        <td>黄平</td>
+                        <td>90.00%</td>
+                    </tr>
+                    <tr>
+                        <td>22</td>
+                        <td>汇吉证券投资</td>
+                        <td>&nbsp;</td>
+                        <td>79.00%</td>
+                    </tr>
+                    <tr>
+                        <td>23</td>
+                        <td>泰石1期</td>
+                        <td>车克</td>
+                        <td>78.00%</td>
+                    </tr>   
+                    <tr>
+                        <td>24</td>
+                        <td>平安证大一期</td>
+                        <td>朱南松</td>
+                        <td>69.00%</td>
+                    </tr>
+                    <tr>
+                        <td>25</td>
+                        <td>融裕5号</td>
+                        <td>张一凡</td>
+                        <td>67.00%</td>
+                    </tr>
+                    <tr>
+                        <td>26</td>
+                        <td>创世翔1号</td>
+                        <td>黄平</td>
+                        <td>90.00%</td>
+                    </tr>
+                    <tr>
+                        <td>27</td>
+                        <td>汇吉证券投资</td>
+                        <td>&nbsp;</td>
+                        <td>79.00%</td>
+                    </tr>
+                    <tr>
+                        <td>28</td>
+                        <td>泰石1期</td>
+                        <td>车克</td>
+                        <td>78.00%</td>
+                    </tr>   
+                    <tr>
+                        <td>29</td>
+                        <td>平安证大一期</td>
+                        <td>朱南松</td>
+                        <td>69.00%</td>
+                    </tr>
+                    <tr>
+                        <td>30</td>
+                        <td>融裕5号</td>
+                        <td>张一凡</td>
+                        <td>67.00%</td>
+                    </tr> -->
+                </table>
+                
+                <div class='Page'>
+                	{$page}
+                    <!-- <a href='#' title='首页'>首页</a>
+                    <a href='#' title='上一页'>上一页</a>
+                    <a href='#' class='active'>1</a>
+                    <a href='#'>2</a>
+                    <a href='#'>3</a>
+                    <a href='#' title='下一页'>下一页</a>
+                    <a href='#' title='末页'>末页</a> -->
+                </div>
+            </div>
+        </div>
+   		<div class="content-right">
+        	<div class="content-right-atd">
+        		<foreach name="linkList" item="vo">      
+        			<eq name="vo.type" value="右边栏广告">       				
+        			   <a href="{$vo.action}"><img src="{$vo.imgurl}"/></a><br/><br/>
+        			</eq> 	
+        		</foreach>
+                <!-- <a href="#"><img src="picfile/atd01.jpg"/></a><br/><br/>
+                <a href="#"><img src="picfile/atd02.jpg"/></a><br/><br/>
+                <a href="#"><img src="picfile/atd03.jpg"/></a> -->
+            </div>
+        
+        </div>
+   </div>
+</div>
+
+
+     <!-- 固定条 -->
+   <include file="Public/foot" />
+
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="__PUBLIC__/res/favicon.ico" type="image/x-icon">
+	<title>专家介绍</title>
+	<link rel="stylesheet" href="__PUBLIC__/zzcss/base.css" type="text/css" />
+	<link rel="stylesheet" href="__PUBLIC__/zzcss/columns.css" type="text/css" />
+</head>
+
+<body>
+ <!-- 固定条 -->
+   <include file="Public/top" />
+
+    <!-- 固定条 -->
+   <include file="Public/bar" />
+
+<div id="container"> 
+   <div class="content_title"><a href="__APP__/Home/Index/index">首页</a>　>　<a href="__APP__/Home/Index/experts">专家解盘</a>　>　<span>{$experts.name}</span></div>   
+   <div class="sub-banner">
+    	<a href="{$link.action}"><img src="{$link.imgurl}" width="1024" height="100" /></a>
+    </div>
+   <div class="content">
+   		<div class="content-left border">
+            <div class="box_rw">
+                    <div class="box_rw1">
+                        <img src="{$experts.imgurl}" />
+                        <p>
+                            {$experts.name}
+                        </p>
+                    </div>
+                    
+                    <div class='box_rw2'>
+                        <p><B>{$experts.position}</B></p>
+                        <p>注册职业资格号：{$experts.code}</p>
+                        <p><span style="color:red;">星级：</span><span class="star">{$experts.star}</span></p>
+                    </div>
+                    <div class='box_rw3'>
+                        个人简介:
+                        <span>{$experts.introduce}</span>
+                    </div>
+                </div>
+                
+            <div class="title"><h3>相关文章</h3></div>
+                <ul class="column">                         
+                	
+                	  <foreach name="videoList" item="vo" > 
+            	         <li><a href="__APP__/Home/Index/video_show?id={$vo.id}">{$vo.name|mb_substr=0,20,'utf-8'}</a><span>{$vo.intime}</span></li>
+            	    </foreach>                      
+                        <!-- <li><a href="video-show.html">省林业厅办公室关于印发《2015年湖北省林业普法依法…</a><span>2013-04-08</span></li>
+                        <li><a href="video-show.html">省林业厅办公室关于开展 涉林非法集资风险专项排查处…</a><span>2012-04-23</span></li>
+                        <li><a href="video-show.html">黄石市举办首届兰文化艺术展览会</a><span>2012-04-23</span></li>
+                        <li><a href="video-show.html">新华网：和总书记一起守护绿水青山 </a><span>2015-07-06</span></li> 
+                        <li><a href="video-show.html">为项目落地当好"马前卒"</a><span>2013-11-21</span></li>  
+                         
+                        <li><a href="video-show.html">保发展 保红线 保民生 为促进黄石经济转型实现跨越发展再作新贡献</a><span>2015-02-25</span></li>   
+                        <li><a href="video-show.html">为项目落地当好"马前卒"———访局长吴风雨</a><span>2015-02-24</span></li>   
+                        <li><a href="video-show.html">黄石部门奋力破解资源枯竭难题</a><span>2015-02-24</span></li>   
+                        <li><a href="video-show.html">黄石"三园一带"开发建设的思考</a><span>2015-01-27</span></li>   
+                        <li><a href="video-show.html">吴风雨局长接受十一五工作回顾访谈</a><span>2015-01-04 </span></li>
+                        
+                        <li><a href="video-show.html">部门服务重点项目不遗余力</a><span>2013-04-08</span></li>
+                        <li><a href="video-show.html">推进转型勇为先-在第43个世界地球日来临之际访国土吴风雨局长</a><span>2012-04-23</span></li>
+                        <li><a href="video-show.html">转型跨越当好排头兵</a><span>2012-04-23</span></li>
+                        <li><a href="video-show.html">2011年7月6日访局吴风雨局长 </a><span>2015-07-06</span></li> 
+                        <li><a href="video-show.html">为项目落地当好"马前卒"</a><span>2013-11-21</span></li>  
+                         
+                        <li><a href="video-show.html">保发展 保红线 保民生 为促进黄石经济转型实现跨越发展再作新贡献</a><span>2015-02-25</span></li>   
+                        <li><a href="video-show.html">为项目落地当好"马前卒"———访局长吴风雨</a><span>2015-02-24</span></li>   
+                        <li><a href="video-show.html">黄石部门奋力破解资源枯竭难题</a><span>2015-02-24</span></li>   
+                        <li><a href="video-show.html">黄石"三园一带"开发建设的思考</a><span>2015-01-27</span></li>   
+                        <li><a href="video-show.html">吴风雨局长接受十一五工作回顾访谈</a><span>2015-01-04 </span></li>
+                        <li><a href="video-show.html">吴风雨局长接受十一五工作回顾访谈</a><span>2015-01-04 </span></li> -->
+                </ul>
+                <div class='Page'>
+                    <!-- <a href='#' title='首页'>首页</a>
+                    <a href='#' title='上一页'>上一页</a>
+                    <a href='#' class='active'>1</a>
+                    <a href='#'>2</a>
+                    <a href='#'>3</a>
+                    <a href='#' title='下一页'>下一页</a>
+                    <a href='#' title='末页'>末页</a> -->
+                    {$page}
+                </div>
+        </div>
+   		<div class="content-right-side">
+              <div class="title"><span>专家</span></div>
+              <ul> 
+              	 <foreach name="expertsList" item="vo" >              		              			
+              		   <li><a href="__APP__/Home/Index/experts_introduce?id={$vo.id}">{$vo.name}</a></li>             		
+              	</foreach>
+                    <!-- <li><a href="famous-introduce.html">史玉柱</a></li>
+                    <li><a href="famous-introduce.html">马蔚华</a></li>
+                    <li><a href="famous-introduce.html">柳传志</a></li>
+                    <li><a href="famous-introduce.html">郭台铭</a></li>
+                    <li><a href="famous-introduce.html">冯仑</a></li>
+                    <li><a href="famous-introduce.html">唐双宁</a></li>
+                    <li><a href="famous-introduce.html">李书福</a></li>
+                    <li><a href="famous-introduce.html">张近东</a></li>
+                    <li><a href="famous-introduce.html">唐骏</a></li>
+                    <li><a href="famous-introduce.html">马化腾</a></li>
+                    <li><a href="famous-introduce.html">宗庆后</a></li>
+                    <li><a href="famous-introduce.html">陈天桥</a></li>
+                    <li><a href="famous-introduce.html">李彦宏</a></li>
+                    <li><a href="famous-introduce.html">王传福</a></li>
+                    <li><a href="famous-introduce.html">郭广昌</a></li>
+                    <li><a href="famous-introduce.html">马明哲</a></li>
+                    <li><a href="famous-introduce.html">李嘉诚</a></li>
+                    <li><a href="famous-introduce.html">王石</a></li>
+                    <li><a href="famous-introduce.html">潘石屹</a></li>
+                    <li><a href="famous-introduce.html">任志强</a></li>
+                    <li><a href="famous-introduce.html">黄光裕</a></li> -->
+              </ul>
+          </div>
+   </div>
+</div>
+
+
+  <!-- 固定条 -->
+   <include file="Public/foot" />
+
+</body>
+</html>

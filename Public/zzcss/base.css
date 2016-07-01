@@ -1,0 +1,49 @@
+﻿@charset "utf-8";
+
+*{ margin:0; padding:0; }
+body{ font-size:13px;color:#212121; text-align:center;font-family:"微软雅黑" ,Microsoft YaHei;background:url(../images/02.png) repeat;}
+ul,li{ list-style-type:none;}
+img{ border:0;}
+a{ color:#4A4A4A; text-decoration:none;}
+a:hover{ color:#FF6600; text-decoration:underline;}
+a.more{float:right; color:#0101EF;}
+.clear{ clear:both;}
+.text-right{text-align:right;}
+.pull-left{ float:left;}
+.pull-right{ float:right;}
+table{border-collapse:collapse;}
+p{margin:10px 0;}
+h1, h2, h3, h4, h5, h6 {margin: 0;	padding: 0;	font-weight: normal;}
+h1{font-size:36px; color:#212121; line-height:52px; font-weight:600;}
+h2{font-size:24px; color:#999999; line-height:68px;}
+h3{font-size:19px; color:#212121; line-height:32px;}
+h4{font-size:15px; color:#3B3B3B; line-height:32px;}
+h5{font-size:13px; color:#3B3B3B; line-height:34px;}
+h6{font-size:13px; color:#474747; line-height:27px;}
+
+#container{ width:1024px; margin:0 auto;overflow:hidden;text-align:left;}
+#head{}
+.margin{width:1024px; margin:0 auto;overflow:hidden;}
+#foot{padding:10px 0; height:auto;line-height:25px; text-align:center; color:#989896;}
+
+.top{ height:32px; line-height:32px; border-bottom:1px solid #DDDDDD; background-color:#F4F4F4;}
+.top a{ margin:0 5px; color:#505050;}
+.top02{ height:104px; overflow:hidden; background-color:#FFF;}
+.top02 .pull-left{ margin-top:16px; width:260px; text-align:left;}
+.top02 .pull-right{ width:760px;}
+
+.nav{height:48px;overflow:hidden;display:block; background-color:#FFF;}
+.nav li{ line-height:48px; height:48px;float:left;}
+.nav li a{ font-size:16px; color:#444; padding:0 19px; display:block;}
+.nav li a:hover{ color:#FF6600;}
+.search{float:right;margin-top:12px; }
+.search input.inputText{ width:165px; height:24px; line-height:24px;padding-left:4px; border:1px solid #FF8712;vertical-align:middle; margin-top:0 !important;margin-top:-1px;}
+.search input.inputBtn{width:76px; height:26px;line-height:26px; border:0; background-color:#FF8712; color:#FFF; font-weight:bold;}
+
+.pull-service{ position:fixed!important; position:absolute; right:0; top:23%; overflow:hidden; width:99px;}
+.service-center{ border-left:1px solid #DADADA; border-right:1px solid #DADADA;padding: 4px 0; background-color:#FFF;}
+.service-center li{padding-bottom: 4px;}
+.service-center li a{background: url("../images/service-04.jpg") no-repeat;
+	color: #142B38;display: block;height: 23px;line-height: 23px;margin: 0 auto;padding-left: 20px;	width: 56px; font-size:12px;}
+.service-center li a:hover{ color:#1A649D;}
+.service-center li .Cred{ color:#EB1412;}

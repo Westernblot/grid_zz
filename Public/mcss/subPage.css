@@ -1,0 +1,59 @@
+.p_dialog {clear: both;padding: 0 12px 10px;font-size: 16px}
+.p_dialog_bar {clear: both;font-weight: normal;padding: 15px 0 5px;font-size: 18px}
+.p_dialog_bar span {border-left: 2px solid #2562aa;padding-left: 8px;height: 16px;line-height: 16px;}
+.p_dialoglist {clear: both;background: #f6f7f9;border: 1px solid #eee}
+.p_dialoglist dl {clear: both;overflow: hidden;*zoom:1;border-bottom: 1px solid #eee}
+.p_dialoglist dl:last-child {border-bottom: none}
+.p_dialoglist dt {float: left;width: 50px;text-align: center;padding: 2px 0;line-height: 36px;font-weight: bold}
+.p_dialoglist dd {overflow: hidden;*zoom:1;padding: 2px 0;line-height: 36px;border-left: 1px solid #eee;background: #fff}
+.p_dialoglist dd a {float: left;padding: 0 5px 0 10px}
+
+.tj_art_baner {clear: both;text-align: center;position: relative}
+.tj_art_baner img {max-width: 100%;width: 100%}
+.art_main_card {clear: both;text-align: justify;margin-bottom: 10px;padding: 0 20px 10px;line-height: 27px;background: #fff;border-bottom: 1px solid #dcdcdc;overflow: hidden}
+.art_main_card a {color: #3990e6}
+a.partner_link {color: #fc8637}
+strong {font-weight: 700}
+h4 {font-weight: 400}
+.art_main_card img {max-width: 100%}
+.art_title {clear: both;padding: 20px 0;font-size: 21px}
+.art_title_h1 {line-height: 25px;font-weight: 700;padding-bottom: 12px}
+.art_title_op {clear: both;height: 14px;line-height: 14px;font-size: 10px;color: #888; overflow:hidden;}
+.art_title_op time {float: left;max-width: 180px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis}
+.art_title_op aside {float: right;font-size: 12px;color: #3990e6;line-height: 14px}
+.art_title_op aside a {display: inline-block;color: #3990e6;margin-left: 6px;height: 14px;line-height: 14px}
+.video_module {width: 100%;margin: 20px 0}
+.video_module h4 {line-height: 18px;color: #888;font-size: 14px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;padding-top: 8px}
+.video_module .slide-box {display: -webkit-box}
+.video_module .video-card {display: block;width: 100%;margin: 0;overflow: hidden;-webkit-box-sizing: border-box;position: relative}
+.video_module .video-card>div {width: 100%;background: #000;position: relative;overflow: hidden}
+.video_module .video-card>div img {min-width: 100%}
+.video_module .video-card .play_btn {width: 60px;height: 60px;font-size: 60px;color: #fff;border-radius: 2em;background: rgba(0,0,0,.5);position: absolute;top: 50%;left: 50%;margin-top: -30px;margin-left: -30px}
+.video_module .one-video .video-card {width: 100%;margin: 0}
+.video_module .article_video{text-align: center;font-size: 14px;line-height: normal;padding: 0;background:#000}
+.video_module .icon-page_video {padding-right: 8px}
+.art_t {text-align: justify}
+.extend-module {background: #fff;margin-bottom: 10px}
+.extend-module .th_td {font-size: 16px;height: 35px;color: #444;line-height: 35px;background-color: #f9f9f9;padding: 0 20px;border-top: 1px solid #dcdcdc;}
+.recommend_moudule {padding: 0 10px;background: #fff}
+.load-more {padding: 12px 0 20px;text-align: center;background: #f9f9f9;border-top: 1px solid #dcdcdc}
+.load-more .loading {color: #616161;display: inline-block;font-size: 14px;height: 24px;line-height: 24px;padding: 0 0 0 30px;position: relative; background:url(../images/loading.gif) no-repeat left center;}
+
+.card_more_list{clear: both;height: 36px;line-height: 36px;border-bottom: 1px solid #ececec;background: #fff;text-align: center;font-size: 14px;}
+.more_btn_down {background-position: right -269px;padding-right: 12px;cursor: pointer;display: inline-block;}
+
+.nav_module {clear: both;overflow: hidden;padding:10px 7px; text-align:center;}
+.nav_items li{ display:inline-block;width:76px;height:22px; line-height:22px;color: #333;text-align:center;border-right: 1px solid #dfdfdf; margin-left:-1px;}
+.nav_items li a{display: block;color: #333;font-size: 15px}
+.nav_items li a.on{ color: #007aff; background-color:#FFF;font-weight: 700}
+.nav_items li:last-child { border-right:0;}
+
+
+/*登陆表单*/
+.loginform{ text-align:center;margin:27px 17px;}
+.loginform li{ position:relative;display:block;text-align:left; margin:13px 0;padding:12px 8px 12px 18px;border: 1px solid #dfdfdf; background-color:#FFF;border-radius:3px;-moz-border-radius:3px; -webkit-border-radius:3px; overflow:hidden;}
+.loginform li.code { padding:0;}
+.loginform li.code .codeInput{width:50%; margin:12px 8px 12px 18px;}
+.loginform li.code .codeSource{position:absolute; right:0;height:48px; line-height:47px; padding:0 6px; text-decoration:underline; color:#7F7F7F; background-color:#f8f8f8;border-left: 1px solid #dfdfdf; }
+.loginform .but{padding:6px 18px;}
+.butYellow{border-radius:3px;width:49%; height:40px;background:#FA7800; color:#FFF;}

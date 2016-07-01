@@ -1,0 +1,58 @@
+<div class="bar">
+    <div class="margin">
+        <div class="top02">
+                  <div class="pull-left">
+                      <img src="__PUBLIC__/images/logo.jpg" />
+                  </div>
+                  <div class="pull-right">
+                      <!-- <img src="__PUBLIC__/images/top-banner.jpg" /> -->
+                      <embed src="__PUBLIC__/images/top.swf" width="760" height="104"></embed>
+                  </div>
+        </div>
+        <div class="nav">
+              <ul>    
+                  <li><a href="__APP__/Home/Index/index"
+                  	<eq name="Think.ACTION_NAME" value="index">class="active"</eq>
+                  	>首页</a></li>   
+                  <li><a href="__APP__/Home/Index/news?type=热点专案"
+                  	<eq name="type" value="热点专案">class="active"</eq>
+                  	>热点专案</a></li>           
+                  <li><a href="__APP__/Home/Index/news?type=金融服务"
+                  	<eq name="type" value="金融服务">class="active"</eq>
+                  	>金融服务</a></li> 
+                  <li><a href="__APP__/Home/Index/news?type=中证投资锦囊"
+                  	<eq name="type" value="中证投资锦囊">class="active"</eq>
+                  	>每日金股</a></li>  
+                  <li><a href="__APP__/Home/Index/experts" 
+                  	<eq name="Think.ACTION_NAME" value="experts">class="active"</eq>
+                  	>专家解盘</a></li>  
+                  <li><a href="http://zhibo.cxcxt.com" target="_blank">直播间</a></li>
+                  <li><a href="__APP__/Home/Index/product"
+                  	<eq name="Think.ACTION_NAME" value="product">class="active"</eq>
+                  	>战绩回顾</a></li>
+                  <li><a href="__APP__/Home/Index/about"
+                  	<eq name="Think.ACTION_NAME" value="about">class="active"</eq>
+                  	>关于中证</a></li>
+              </ul>  
+              <div class="search">
+             <form id="form1" action="__APP__/Home/Index/search" method="get">     
+                <table border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td><input type="text" id="keyword" name="keyword" class="inputText" placeholder="请输入关键字"/> </td>
+                        <td><input name="search" type="button" class="inputBtn" value="搜索" onclick="doSubmit()" /></td>
+                    </tr>
+                </table>
+             </form>
+              </div>
+           </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+	
+	function doSubmit(){
+		
+		document.getElementById('form1').submit();
+	}
+	
+</script>

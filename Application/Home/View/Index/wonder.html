@@ -1,0 +1,260 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="__PUBLIC__/res/favicon.ico" type="image/x-icon">
+	<title>精彩回顾</title>
+	<link rel="stylesheet" href="__PUBLIC__/zzcss/base.css" type="text/css" />
+	<link rel="stylesheet" href="__PUBLIC__/zzcss/columns.css" type="text/css" />
+</head>
+
+<body>
+   <!-- 固定条 -->
+   <include file="Public/top" />
+
+    <!-- 固定条 -->
+   <include file="Public/bar" />
+
+<div id="container"> 
+   <div class="content_title"><a href="__APP__/Home/Index/index">首页</a>　>　<span><a href="__APP__/Home/Index/wonder">精彩回顾</a></span></div>   
+   <div class="sub-banner">
+    		<a href="{$link.action}"><img src="{$link.imgurl}" width="1024" height="100" /></a>
+    </div>
+   <div class="content">
+   		<div class="content-left border">
+        	<div class="table-main">
+                <table class="stock">
+                    	<tr>
+                        	<th>股票</th>
+                        	<th>代码</th>
+                        	<th>日期</th>
+                        	<th>板块内容</th>
+                        	<th>涨幅</th>
+                        </tr>
+                        
+                        <foreach name="wonderList" item="vo">
+                        	<tr>
+                        	<td>{$vo.stock}</td>
+                        	<td>{$vo.code}</td>
+                        	<td>{$vo.indate}</td>
+                        	<td>{$vo.content}</td>
+                        	<td>{$vo.increase}</td>
+                            </tr>
+                        </foreach>
+                    	<!-- <tr class="even">
+                        	<td>中国铁建</td>
+                        	<td>601186</td>
+                        	<td>2015-7-07</td>
+                        	<td>铁路基建</td>
+                        	<td>29.79%</td>
+                        </tr>
+                    	<tr>
+                        	<td>伊利股份</td>
+                        	<td>600887</td>
+                        	<td>2015-7-08</td>
+                        	<td>食品饮料</td>
+                        	<td>20.87%</td>
+                        </tr>
+                    	<tr class="even">
+                        	<td>中国铁建</td>
+                        	<td>601186</td>
+                        	<td>2015-7-07</td>
+                        	<td>铁路基建</td>
+                        	<td>29.79%</td>
+                        </tr>
+                    	<tr>
+                        	<td>伊利股份</td>
+                        	<td>600887</td>
+                        	<td>2015-7-08</td>
+                        	<td>食品饮料</td>
+                        	<td>20.87%</td>
+                        </tr>
+                    	<tr class="even">
+                        	<td>中国铁建</td>
+                        	<td>601186</td>
+                        	<td>2015-7-07</td>
+                        	<td>铁路基建</td>
+                        	<td>29.79%</td>
+                        </tr>
+                    	<tr>
+                        	<td>伊利股份</td>
+                        	<td>600887</td>
+                        	<td>2015-7-08</td>
+                        	<td>食品饮料</td>
+                        	<td>20.87%</td>
+                        </tr>
+                    	<tr class="even">
+                        	<td>中国铁建</td>
+                        	<td>601186</td>
+                        	<td>2015-7-07</td>
+                        	<td>铁路基建</td>
+                        	<td>29.79%</td>
+                        </tr>
+                    	<tr>
+                        	<td>伊利股份</td>
+                        	<td>600887</td>
+                        	<td>2015-7-08</td>
+                        	<td>食品饮料</td>
+                        	<td>20.87%</td>
+                        </tr>
+                    	<tr class="even">
+                        	<td>中国铁建</td>
+                        	<td>601186</td>
+                        	<td>2015-7-07</td>
+                        	<td>铁路基建</td>
+                        	<td>29.79%</td>
+                        </tr>
+
+                    	<tr>
+                        	<td>伊利股份</td>
+                        	<td>600887</td>
+                        	<td>2015-7-08</td>
+                        	<td>食品饮料</td>
+                        	<td>20.87%</td>
+                        </tr>
+                    	<tr class="even">
+                        	<td>中国铁建</td>
+                        	<td>601186</td>
+                        	<td>2015-7-07</td>
+                        	<td>铁路基建</td>
+                        	<td>29.79%</td>
+                        </tr>
+                    	<tr>
+                        	<td>伊利股份</td>
+                        	<td>600887</td>
+                        	<td>2015-7-08</td>
+                        	<td>食品饮料</td>
+                        	<td>20.87%</td>
+                        </tr>
+                    	<tr class="even">
+                        	<td>中国铁建</td>
+                        	<td>601186</td>
+                        	<td>2015-7-07</td>
+                        	<td>铁路基建</td>
+                        	<td>29.79%</td>
+                        </tr>
+
+                    	<tr>
+                        	<td>伊利股份</td>
+                        	<td>600887</td>
+                        	<td>2015-7-08</td>
+                        	<td>食品饮料</td>
+                        	<td>20.87%</td>
+                        </tr>
+                    	<tr class="even">
+                        	<td>中国铁建</td>
+                        	<td>601186</td>
+                        	<td>2015-7-07</td>
+                        	<td>铁路基建</td>
+                        	<td>29.79%</td>
+                        </tr>
+                    	<tr>
+                        	<td>伊利股份</td>
+                        	<td>600887</td>
+                        	<td>2015-7-08</td>
+                        	<td>食品饮料</td>
+                        	<td>20.87%</td>
+                        </tr>
+                    	<tr class="even">
+                        	<td>中国铁建</td>
+                        	<td>601186</td>
+                        	<td>2015-7-07</td>
+                        	<td>铁路基建</td>
+                        	<td>29.79%</td>
+                        </tr>
+
+                    	<tr>
+                        	<td>伊利股份</td>
+                        	<td>600887</td>
+                        	<td>2015-7-08</td>
+                        	<td>食品饮料</td>
+                        	<td>20.87%</td>
+                        </tr>
+                    	<tr class="even">
+                        	<td>中国铁建</td>
+                        	<td>601186</td>
+                        	<td>2015-7-07</td>
+                        	<td>铁路基建</td>
+                        	<td>29.79%</td>
+                        </tr>
+                    	<tr>
+                        	<td>伊利股份</td>
+                        	<td>600887</td>
+                        	<td>2015-7-08</td>
+                        	<td>食品饮料</td>
+                        	<td>20.87%</td>
+                        </tr>
+                    	<tr class="even">
+                        	<td>中国铁建</td>
+                        	<td>601186</td>
+                        	<td>2015-7-07</td>
+                        	<td>铁路基建</td>
+                        	<td>29.79%</td>
+                        </tr>
+
+                    	<tr>
+                        	<td>伊利股份</td>
+                        	<td>600887</td>
+                        	<td>2015-7-08</td>
+                        	<td>食品饮料</td>
+                        	<td>20.87%</td>
+                        </tr>
+                    	<tr class="even">
+                        	<td>中国铁建</td>
+                        	<td>601186</td>
+                        	<td>2015-7-07</td>
+                        	<td>铁路基建</td>
+                        	<td>29.79%</td>
+                        </tr>
+                    	<tr>
+                        	<td>伊利股份</td>
+                        	<td>600887</td>
+                        	<td>2015-7-08</td>
+                        	<td>食品饮料</td>
+                        	<td>20.87%</td>
+                        </tr>
+                    	<tr class="even">
+                        	<td>中国铁建</td>
+                        	<td>601186</td>
+                        	<td>2015-7-07</td>
+                        	<td>铁路基建</td>
+                        	<td>29.79%</td>
+                        </tr> -->
+
+                    </table>
+                
+                <div class='Page'>
+                    <!-- <a href='#' title='首页'>首页</a>
+                    <a href='#' title='上一页'>上一页</a>
+                    <a href='#' class='active'>1</a>
+                    <a href='#'>2</a>
+                    <a href='#'>3</a>
+                    <a href='#' title='下一页'>下一页</a>
+                    <a href='#' title='末页'>末页</a> -->
+                    {$page}
+                </div>
+            </div>
+        </div>
+   		<div class="content-right">
+        	<div class="content-right-atd">
+        		<div class="content-right-atd">
+        		<foreach name="linkList" item="vo">      
+        			<eq name="vo.type" value="右边栏广告">       				
+        			   <a href="{$vo.action}"><img src="{$vo.imgurl}"/></a><br/><br/>
+        			</eq> 	
+        		</foreach>
+                <!-- <a href="#"><img src="picfile/atd01.jpg"/></a><br/><br/>
+                <a href="#"><img src="picfile/atd02.jpg"/></a><br/><br/>
+                <a href="#"><img src="picfile/atd03.jpg"/></a> -->
+            </div>
+        
+        </div>
+   </div>
+</div>
+
+
+     <!-- 固定条 -->
+   <include file="Public/foot" />
+
+</body>
+</html>

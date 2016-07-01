@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>中证财讯通</title>
+	<link rel="stylesheet" href="__PUBLIC__/cxtcss/style.css" type="text/css" />
+</head>
+
+<body>
+<div id="container"> 
+   <div class="sub-banner">
+    	<a href="javascript:#"><img src="__PUBLIC__/images/1.jpg" width="950" height="100" /></a>
+    </div>
+   <div class="content">
+   		<div class="content-left">
+            <ul class="info">
+            	
+            	<foreach name="newsList" item="vo">
+            		<li>
+                	<a href="__APP__/Client/Index/show?id={$vo.id}"><img src="{$vo.imgurl}" class="object"/></a>
+                    <div class="lable">
+                        <h3><a href="__APP__/Client/Index/show?id={$vo.id}">{$vo.subject}</a></h3>
+                        <h5>{$vo.author}</h5>
+                        <h6>{$vo.description}</h6>
+                        <span>[{$vo.intime}]</span>
+                    </div>
+                    </li>
+            	</foreach>
+            
+            </ul>
+            <div class='Page'>
+                {$page}
+            </div>
+        </div>
+   		<div class="content-right">
+   			 <!--搜索模块开始-->
+       		 <div class="title"><h4 style="text-indent:0em;"><img src="__PUBLIC__/images/search.png" /> 文章搜索</h4></div>
+             <div class="search">
+          <form action="__URL__/news" >
+          	<input type="hidden" name="type" value="{$type}" />
+             <table>
+                <tr>
+                    <td class="text-right">关键字</td>
+                    <td><input id="keyword" name="keyword" type="text" class="infoInput" value="{$keyword}" /></td>
+                </tr>
+                <!-- <tr>
+                    <td class="text-right">分类</td>
+                    <td>
+                        <select size="1" name="tid" class="select" id="tid">
+                            <option value="product1.html"> 标题</option>
+                            <option value="product2.html"> 文章内容</option>
+                        </select>
+                    </td>
+                </tr> -->
+               <tr>
+                    <td></td>
+                    <td><input type="submit" class="buttonface" value="开始搜索" /></td>
+                </tr>
+            </table>
+          </form>
+             </div>
+        <!--搜索模块结束-->
+        
+        	<ul class="side-list">  
+        		
+        		<foreach name="linkList" item="vo">
+        		  <li>
+                    <a href="{$vo.action}" class="listlable"><img src="{$vo.imgurl}" /></a>
+                    <div class="listText">
+                        <div class="focus-on"><a href="{$vo.action}">关注</a></div>
+                        <div class="t"><a href="{$vo.action}">{$vo.name}</a></div>
+                        <div class="tab-bg"></div>
+                    </div>
+                   </li>       			
+        		</foreach>
+            </ul>
+        
+        </div>
+   </div>
+</div>
+
+</body>
+</html>
